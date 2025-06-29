@@ -180,7 +180,7 @@ enable_ssh_site_block() {
   echo -n "Starting site blocking... "
 
   # Reset UFW
-  sudo ufw reset
+  sudo ufw reset -y
   sudo ufw default deny incoming
   sudo ufw default deny outgoing
 
