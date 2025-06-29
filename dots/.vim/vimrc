@@ -1,19 +1,11 @@
-" {{{ view/edit options
-syntax on
-set termguicolors                      " use full 24-bit color
-set number                             " show line numbers
-set autoindent                         " automatic indent
-set foldmethod=syntax                  " syntax based folding
-set nofoldenable                       " don't open file in folds
-set cursorline                         " highlight the line under cursor
-set laststatus=2                       " show status bar
-set linebreak                          " don't break words
-set scrolloff=5                        " let 5 lines after cursor
-set showcmd                            " show commands
-set wildmenu                           " display all matching files when we tab-complete
-set tabstop=4                          " tab size in columns
-set shiftwidth=4                       " indentation size
-                                       " https://medium.com/@arisweedler/tab-settings-in-vim-1ea0863c5990
-set noexpandtab                        " don't insert spaces, default
-set backspace=indent,eol,start         " get backspace to work on these situations
-" }}}
+set nocp ai bs=2 hls ic is lbr ls=2 mouse=a nu ru sc scs smd so=3 sw=2 ts=2 rnu
+filetype plugin indent on
+syn on
+map gA m'ggVG"+y''
+inoremap {<CR> {<CR>}<Esc>ko
+nnoremap = mzgg=G`z
+vnoremap <C-k> :s/^\s*\zs/\/\/ /<CR>:nohl<CR>
+nnoremap <C-k> :s/^\s*\zs/\/\/ /<CR>:nohl<CR>
+vnoremap <C-l> :s/^\s*\zs\/\/ //<CR>:nohl<CR>
+nnoremap <C-l> :s/^\s*\zs\/\/ //<CR>:nohl<CR>
+autocmd FileType cpp map <F9> :w<CR> :!clear; g++ % -DONPC -o %:r && ./%:r<CR>
