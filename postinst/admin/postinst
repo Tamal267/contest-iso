@@ -158,20 +158,11 @@ check_packages() {
 update_users() {
   echo -n "Updating users... "
 
-  ADMIN_USER="admin"
-  ADMIN_PASS='$1$Rd490TmZ$kTNwQiGJFah4t/NRqUd1e1'   # openssl passwd -1 -salt Rd490TmZ 'PLAINTEXT'
   run_as_root usermod --password $(echo $ADMIN_PASS) "$ADMIN_USER"
   run_as_root getent shadow "$ADMIN_USER" | cut -d':' -f2 | grep -q $(echo $ADMIN_PASS)
 
-  TEAM_USER="main"
-  TEAM_PASS='$1$Rd490TmZ$MDQCGg2d6Q1sJrg80UViF0'   # openssl passwd -1 -salt Rd490TmZ 'PLAINTEXT'
   run_as_root usermod --password $(echo $TEAM_PASS) "$TEAM_USER"
   run_as_root getent shadow "$TEAM_USER" | cut -d':' -f2 | grep -q $(echo $TEAM_PASS)
-
-  MOCK_USER="mock"
-  MOCK_PASS='$1$Rd490TmZ$/CEXDyrKsM6Ylw6TuWum6.'   # openssl passwd -1 -salt Rd490TmZ 'mock'
-  run_as_root usermod --password $(echo $MOCK_PASS) "$MOCK_USER"
-  run_as_root getent shadow "$MOCK_USER" | cut -d':' -f2 | grep -q $(echo $MOCK_PASS)
 
   echo "DONE"
 }
