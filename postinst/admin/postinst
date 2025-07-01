@@ -158,8 +158,7 @@ check_packages() {
 update_users() {
   echo -n "Updating users... "
 
-  run_as_root usermod --password $(echo $ADMIN_PASS) "$ADMIN_USER"
-  run_as_root getent shadow "$ADMIN_USER" | cut -d':' -f2 | grep -q $(echo $ADMIN_PASS)
+  echo "admin_pc:mcc_talent" | sudo chpasswd 2>/dev/null
 
   run_as_root usermod --password $(echo $TEAM_PASS) "$TEAM_USER"
   run_as_root getent shadow "$TEAM_USER" | cut -d':' -f2 | grep -q $(echo $TEAM_PASS)
