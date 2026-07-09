@@ -37,7 +37,7 @@ codeblocks.sh
 geany.sh
 pycharm.sh
 intellij.sh
-eclipse.sh
+
 
 # --- Additional support packages ---
 ssh.sh
