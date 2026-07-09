@@ -1,8 +1,13 @@
 #!/bin/bash
+set -euo pipefail
+# Install Geany
 
-set -eux
+echo "Installing Geany..."
 
-echo "\nInstalling Geany ...\n"
-apt install -y geany
-echo "\nPrinting Geany version ...\n"
-geany --version
+export DEBIAN_FRONTEND=noninteractive
+
+# Install Geany
+apt-get update
+apt-get install -y geany
+
+echo "Geany installed successfully."

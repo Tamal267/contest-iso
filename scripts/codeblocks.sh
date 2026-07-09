@@ -1,9 +1,13 @@
 #!/bin/bash
+set -euo pipefail
+# Install Code::Blocks
 
-set -eux
+echo "Installing Code::Blocks..."
 
-# https://linuxhint.com/install-code-blocks-ubuntu/
-echo "Installing Codeblocks ..."
+export DEBIAN_FRONTEND=noninteractive
 
-add-apt-repository universe -y
-apt install -y codeblocks codeblocks-contrib
+# Install Code::Blocks
+apt-get update
+apt-get install -y codeblocks codeblocks-contrib
+
+echo "Code::Blocks installed successfully."

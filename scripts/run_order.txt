@@ -12,29 +12,35 @@ trim.sh
 
 # === Install packages ===
 
+# --- Base tools ---
+curl.sh
+git.sh
+
 # --- Browsers ---
-google_chrome.sh
+browsers.sh
 
 # --- Compilers ---
-gcc-12.sh
-python3.11.sh
-openjdk17.sh
+gcc_gpp.sh
+python.sh
+pypy3.sh
+java.sh
 
 # --- Editors ---
 vim.sh
 emacs.sh
-code.sh
+vscode.sh
 sublime.sh
+kate.sh
 
 # --- IDEs ---
 codeblocks.sh
 geany.sh
-pycharm_community.sh
-intellij_idea_community.sh
+pycharm.sh
+intellij.sh
 eclipse.sh
 
 # --- Additional support packages ---
-openssh_server.sh
+ssh.sh
 
 # === Upgrade packages ===
 

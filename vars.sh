@@ -7,13 +7,13 @@ SCRIPTS_DIR="scripts"
 ADMIN_SCRIPTS_DIR="postinst/admin/"
 
 ADMIN_USER="admin"
-ADMIN_PASSWORD='$1$qOaJpMTn$udSLvrlWWiT43He1M2wy5.'
+ADMIN_PASSWORD='$1$5iOZoVZq$m46pHKOYM9DLeUL9XSVro.'
 # encrypted with $(openssl passwd -1 PLAINTEXTPASSWORD)
 
 TEAM_USER="contestant"
-TEAM_PASSWORD='$1$92hYmWFk$qPeMP85ThFuzlKbdgh3cu0'
+TEAM_PASSWORD='$1$qIyPEObu$xVoLAy86H1K7RKN4yMqZa/'
 # encrypted with $(openssl passwd -1 PLAINTEXTPASSWORD)
 
 MOCK_USER="mock"
-MOCK_PASSWORD='$1$MzrwRNfh$km8LUveoj/rZZDZiEA8PB1'
+MOCK_PASSWORD='$1$qIyPEObu$xVoLAy86H1K7RKN4yMqZa/'
 # encrypted with $(openssl passwd -1 'PLAINTEXTPASSWORD')

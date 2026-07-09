@@ -1,6 +1,6 @@
 # Custom OS for Programming Contests
 
-This repository contains recipe to customize the Ubuntu 22.04 Jammy
+This repository contains recipe to customize the Ubuntu 26.04 Resolute
 Jellyfish desktop image for an on-site programming contest.
 
 [![Tests](https://github.com/rebornplusplus/contest-iso/actions/workflows/tests.yml/badge.svg)](https://github.com/rebornplusplus/contest-iso/actions/workflows/tests.yml)
@@ -17,8 +17,8 @@ You can go two ways about this:
 You can choose to create a customized ISO which can then be simply
 installed in each machine. To do that, follow these simple steps:
 
-1. Download a Ubuntu 22.04 desktop image. Find download options
-   [here](http://releases.ubuntu.com/jammy/).
+1. Download a Ubuntu 26.04 desktop image. Find download options
+   [here](http://releases.ubuntu.com/resolute/).
 2. Launch Cubic, configure and find your way to the console in the
    chroot environment.  [Learn how to use Cubic](https://askubuntu.com/questions/741753/how-to-use-cubic-to-create-a-custom-ubuntu-live-cd-image).
 3. Copy/clone the repository files in the `/root` directory. Make sure
@@ -32,7 +32,7 @@ independently.
 
 ### Customize an existing installation
 
-If you have Ubuntu 22.04 installed on a machine, you can simply run the
+If you have Ubuntu 26.04 installed on a machine, you can simply run the
 scripts on the OS to customize your instance. The following steps should
 do the trick:
 
